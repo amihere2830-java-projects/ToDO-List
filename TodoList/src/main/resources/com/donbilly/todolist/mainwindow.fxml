@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="mainBorderPane" fx:controller="com.donbilly.todolist.Controller"
+            xmlns:fx="http://javafx.com/fxml" onKeyPressed="#handleKeyPressed">
+
+<!--    Create Top Pane: to add menu bar-->
+    <top>
+        <VBox>
+            <MenuBar>
+                <!--Add File menu-->
+                <Menu text="File">
+                    <items>
+                        <MenuItem fx:id="" text="New        Ctr+N" onAction="#showNewItemDialog"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Exit        Ctr+Q" onAction="#handleExit"/>
+                    </items>
+                </Menu>
+                <!--Add Help menu-->
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="Help"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Contact"/>
+                    </items>
+                </Menu>
+            </MenuBar>
+            <ToolBar>
+                <HBox>
+                    <!--new icon-->
+                    <Button onAction="#showNewItemDialog" >
+                        <tooltip>
+                            <Tooltip text="Add a new Todo item."/>
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/New24.gif"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <!--delete icon-->
+                    <Button onAction="#iconDeleteItem">
+                        <tooltip>
+                            <Tooltip text="Delete selected Todo item"/>
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/Delete24.gif"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <!--Toggle icon-->
+                    <ToggleButton fx:id="filterToggleButton" text="Today's Items" onAction="#handleFilterButton">
+                        <tooltip>
+                            <Tooltip text="Button Down: Show Today's items only. Button Up: Show all items"/>
+                        </tooltip>
+                    </ToggleButton>
+                </HBox>
+            </ToolBar>
+        </VBox>
+
+    </top>
+<!--    Create Left Pane-->
+    <left>
+        <ListView fx:id="todoListView" >
+        </ListView>
+    </left>
+
+<!--    Create Center Pane-->
+    <center>
+        <VBox>
+            <TextArea fx:id="itemDetailTextArea" VBox.vgrow="ALWAYS" wrapText="true"/>
+
+            <HBox style="-fx-background-color:white" alignment="bottom_right">
+                <padding>
+                    <Insets top="10" bottom="20" right="30"/>
+                </padding>
+                <!--First label-->
+                <Label text="Due: " style="-fx-background-color:white">
+                    <font>
+                        <Font name="Times New Roman bold" size="20"/>
+                    </font>
+                </Label>
+                <!--Second label-->
+                <Label fx:id="deadlineLabel" style="-fx-background-color:white">
+                    <font>
+                        <Font name="Times New Roman bold" size="20"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+
+<!--    Create Bottom Pane-->
+    <bottom >
+        <HBox alignment="CENTER" style="-fx-background-color:gray">
+            <padding>
+                <Insets top="25" bottom="10"/>
+            </padding>
+            <Label text="Samuel Amihere © 2023" />
+        </HBox>
+    </bottom>
+
+
+</BorderPane>
+
