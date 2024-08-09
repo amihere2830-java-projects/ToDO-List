@@ -1,0 +1,24 @@
+#menu-bar, #navbar {
+    -fx-background-color: #d9d3d3;
+    -fx-border-color: #989595;
+}
+
+#menu-bar {
+    
+}
+
+#navbar {
+    /* -fx-background-color: #000000; */
+}
+
+#add, #delete, #today {
+    -fx-background-color: #7c7878;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 1px;
+}
+
+#add:hover, #delete:hover, #today:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #7c7878;
+}

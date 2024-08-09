@@ -1,6 +1,5 @@
 package com.donbilly.todolist;
 
-import com.donbilly.todolist.datamodel.TodoData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,11 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import com.donbilly.todolist.datamodel.TodoData;
+
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainwindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 877, 533);
         stage.setTitle("Todo List");
         stage.setScene(scene);
         stage.show();
