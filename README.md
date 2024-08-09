@@ -23,3 +23,7 @@ This application helps you manage your daily tasks efficiently. You can add, edi
 
 ![4](imgs/4.png)
 
+
+## Authors
+
+- **Samuel Amihere** - *Initial work* - [Samuel](https://github.com/SamuelAmihere)
