@@ -268,7 +268,6 @@ public class Controller {
         } else {
 
             filteredList.setPredicate(wantAllItems);
-            System.out.println("All items selected: "+wantAllItems);
 
             todoListView.getSelectionModel().select(selectedItem);
             if (!addFlag){
