@@ -14,6 +14,8 @@ target/
 
 *.drawio
 
+TodoListItem.txt
+
 ### Eclipse ###
 .apt_generated
 .classpath
