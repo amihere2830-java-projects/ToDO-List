@@ -1,4 +1,4 @@
-package com.donbilly.todolist;
+package com.amisam.todolist;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -7,8 +7,8 @@ import javafx.scene.control.TextField;
 
 import java.time.LocalDate;
 
-import com.donbilly.todolist.datamodel.TodoData;
-import com.donbilly.todolist.datamodel.TodoItem;
+import com.amisam.todolist.datamodel.TodoData;
+import com.amisam.todolist.datamodel.TodoItem;
 
 public class DialogController {
     // Properties

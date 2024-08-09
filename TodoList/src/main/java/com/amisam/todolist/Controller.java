@@ -1,7 +1,5 @@
-package com.donbilly.todolist;
+package com.amisam.todolist;
 
-import com.donbilly.todolist.datamodel.TodoData;
-import com.donbilly.todolist.datamodel.TodoItem;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,6 +23,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
+
+import com.amisam.todolist.datamodel.TodoData;
+import com.amisam.todolist.datamodel.TodoItem;
 
 public class Controller {
     private List<TodoItem> todoItems;

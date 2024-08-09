@@ -3,6 +3,8 @@ module com.example.todolist {
     requires javafx.fxml;
 
 
-    opens com.donbilly.todolist to javafx.fxml;
-    exports com.donbilly.todolist;
+    opens com.amisam.todolist to javafx.fxml;
+    exports com.amisam.todolist;
+    exports com.amisam.todolist.engine;
+    exports com.amisam.todolist.datamodel;
 }

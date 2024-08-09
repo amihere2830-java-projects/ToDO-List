@@ -7,7 +7,7 @@
 <?import javafx.scene.control.DatePicker?>
 
 
-<DialogPane fx:controller="com.donbilly.todolist.DialogController"
+<DialogPane fx:controller="com.amisam.todolist.DialogController"
             xmlns:fx="http://javafx.com/fxml">
 
     <!--The text to display in the header area (comes above the contentText)-->

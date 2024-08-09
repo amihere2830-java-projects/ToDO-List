@@ -1,4 +1,4 @@
-package com.donbilly.todolist.datamodel;
+package com.amisam.todolist.datamodel;
 
 import java.time.LocalDate;
 

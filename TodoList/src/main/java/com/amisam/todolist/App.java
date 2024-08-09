@@ -1,19 +1,32 @@
-package com.donbilly.todolist;
+package com.amisam.todolist;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import com.donbilly.todolist.datamodel.TodoData;
+import com.amisam.todolist.datamodel.TodoData;
+import com.amisam.todolist.engine.DBStorage;
+import com.amisam.todolist.engine.FileStorage;
+import com.amisam.todolist.engine.Storage;
 
-public class Main extends Application {
+public class App extends Application {
+
+    public static String filename = "TodoListItem.txt";
+    public static String storageType = "file";
+
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainwindow.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("mainwindow.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 877, 533);
+        
+        Image icon = new Image(getClass().getResourceAsStream("logo1.png"));
+        stage.getIcons().add(icon);
+        
         stage.setTitle("Todo List");
         stage.setScene(scene);
         stage.show();
@@ -42,5 +55,11 @@ public class Main extends Application {
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public static Storage getStorage(TodoData todoData) {
+        return storageType.equals("file") ? 
+                new Storage(new FileStorage(todoData)) :
+                    new Storage(new DBStorage());
     }
 }
