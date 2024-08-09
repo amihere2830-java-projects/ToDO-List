@@ -1,10 +1,14 @@
-![1](imgs/Screenshot%202024-08-09%20102906.png)
+# Welcome to my ToDoApp
+This application helps you manage your daily tasks efficiently. You can add, edit, and delete tasks as needed. The user interface is designed to be intuitive and easy to use.
+
+## 
+![1](imgs/1.png)
 
 
-![2](imgs/Screenshot%202024-08-09%20102953.png)
+![2](imgs/2.png)
 
 
-![3](imgs/Screenshot%202024-08-09%20103021.png)
+![3](imgs/3.png)
 
 
-![4](imgs/Screenshot%202024-08-09%20103043.png)
+![4](imgs/4.png)
