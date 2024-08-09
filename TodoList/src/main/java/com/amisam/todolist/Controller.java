@@ -54,6 +54,8 @@ public class Controller {
 
     private Predicate<TodoItem> wantTodayItems;
 
+    private boolean addFlag = true;
+
 
 
     //App initializer
@@ -247,6 +249,13 @@ public class Controller {
 
         //use filtering criteria to filter list
         if (filterToggleButton.isSelected()){
+            // change css background color of the selected button
+            if (addFlag){
+                filterToggleButton.setStyle("-fx-text-fill: #7c7878; -fx-background-color: white; -fx-border-color: #7c7878; -fx-border-width: 1px; -fx-border-radius: 2px;");
+                filterToggleButton.setText("all");
+                addFlag = false;
+            }
+            
             filteredList.setPredicate(wantTodayItems);
             if (filteredList.isEmpty()){
                 itemDetailTextArea.clear();
@@ -257,8 +266,17 @@ public class Controller {
                 todoListView.getSelectionModel().selectFirst();
             }
         } else {
+
             filteredList.setPredicate(wantAllItems);
+            System.out.println("All items selected: "+wantAllItems);
+
             todoListView.getSelectionModel().select(selectedItem);
+            if (!addFlag){
+                filterToggleButton.setStyle("-fx-text-fill: white; -fx-background-color: #7c7878; -fx-border-color: #7c7878; -fx-border-width: 1px; -fx-border-radius: 1px;");
+                // change button's text to "today"
+                filterToggleButton.setText("today");
+                addFlag = true;
+            } 
         }
     }
 

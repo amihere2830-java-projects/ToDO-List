@@ -137,7 +137,7 @@
             <padding>
                 <Insets bottom="10" top="25" />
             </padding>
-            <Label text="Samuel Amihere © 2023" />
+            <Label text="Samuel Amihere © 2024" />
         </HBox>
     </bottom>
 
