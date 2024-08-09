@@ -10,6 +10,7 @@ This application helps you manage your daily tasks efficiently. You can add, edi
 - **Styling**: CSS
 - **Version Control**: Git
 
+![concept](imgs/concept.png)
 
 ## 
 ![1](imgs/1.png)
